@@ -1,0 +1,23 @@
+#menu{
+    -fx-background-image: url('./380883.jpg');
+    -fx-background-repeat: stretch;   
+    -fx-background-size: 1280 660;
+    -fx-background-position: center center;
+    -fx-effect: dropshadow(three-pass-box, black, 30, 0.5, 0, 0); 
+}
+
+#selection{
+    -fx-background-image: url('./5e98248c18a55b73c2be233693361113.jpg'); 
+    -fx-background-repeat: stretch;   
+    -fx-background-size: 1280 660;
+    -fx-background-position: center center;
+    -fx-effect: dropshadow(three-pass-box, black, 30, 0.5, 0, 0); 
+}
+
+#fight1{
+    -fx-background-image: url('./d4i6gca-c74c5a5d-2659-4a58-9927-512a6bb6846b.jpg');
+    -fx-background-repeat: stretch;   
+    -fx-background-size: 1280 660;
+    -fx-background-position: center center;
+    -fx-effect: dropshadow(three-pass-box, black, 30, 0.5, 0, 0); 
+}
