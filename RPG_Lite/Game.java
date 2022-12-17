@@ -1,5 +1,6 @@
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.InputMismatchException;
 import java.util.Random;
 import java.util.Scanner;
 
@@ -7,13 +8,23 @@ public class Game {
     static ArrayList<Hero> team = new ArrayList<Hero>();
     static ArrayList<Enemy> enemies = new ArrayList<Enemy>();
     static ArrayList<Combatant> combatants;
-    static int length;
+    static int length = 0;
 
     public static void main(String[] args) {
         int fights = 5;
         Scanner scanner = new Scanner(System.in);
         System.out.println("Choissez le nombre de Heros dans votre equipe");
-        length = scanner.nextInt();
+        while(true) {
+            try{
+                length = scanner.nextInt();
+            }catch(InputMismatchException e) {scanner.nextLine();}
+            if(length > 0) {
+                break;
+            }
+            else {
+                System.out.println("Entrez un chiffre superieur à 0");
+            }
+        }
         setHeroes();
         startFights(fights);
     }
@@ -21,10 +32,21 @@ public class Game {
 
     public static void setHeroes() {
         Scanner scanner = new Scanner(System.in);
+        int choice = 0;
         for(int i=0;i<length;i++) {
             System.out.println("Choisissez la classe de votre hero :");
             System.out.println("1 : Warrior | 2 : Hunter | 3 : Mage | 4 : Healer");
-            int choice = scanner.nextInt();
+            while(true) {
+                try {
+                    choice = scanner.nextInt();
+                }catch(InputMismatchException e) {scanner.nextLine();}
+                if(choice > 0 && choice <=4) {
+                    break;
+                }
+                else {
+                    System.out.println("Entrez un chiffre valide");
+                }
+            }
             switch(choice) {
                 case 1 :
                     team.add(new Warrior());
