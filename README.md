@@ -1,3 +1,5 @@
+G10E Lecordier Julien 61379
+
 # RPG_Lite
 je suis encore sur l'interface graphique
 
